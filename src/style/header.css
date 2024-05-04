@@ -13,8 +13,11 @@
     font-weight: normal;
     font-style: normal;
     height: 60px;
-    z-index: 10;
     display: flex;
+    grid-template-rows: auto;
+    flex-direction: row;
+
+
     align-items: center;
     justify-content: space-between;
     box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 4px 0px;
@@ -26,7 +29,17 @@
     height: 35px;
     border-radius: 50%;
     display: flex;
+
     justify-content: center;
     align-items: center;
     background-color: #55EFC4;
+}
+
+:hover {
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 10px 4px;
+}
+
+.chaticon {
+    background-color: transparent;
+
 }

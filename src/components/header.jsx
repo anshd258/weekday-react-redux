@@ -6,7 +6,7 @@ function Header() {
         <div className='header'>
             <div>👋 Anshdeep...</div>
             <div className='chatbutton'>
-                <FaFacebookMessenger />
+                <FaFacebookMessenger className='chaticon' />
 
             </div>
         </div>

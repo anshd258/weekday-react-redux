@@ -1,12 +1,17 @@
 import logo from './logo.svg';
 import './App.css';
 import Header from './components/header';
+import FilterTiles from './components/filtertiles';
 function App() {
   return (
-    <main className="App">
-      <Header />
+    <div >
 
-    </main>
+      <Header />
+      <FilterTiles />
+
+
+
+    </div >
   );
 }
 

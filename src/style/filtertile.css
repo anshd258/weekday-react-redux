@@ -1,0 +1,9 @@
+.filterbox {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: row;
+
+    flex-wrap: wrap;
+    padding-left: 20px;
+    row-gap: calc(8px);
+}
