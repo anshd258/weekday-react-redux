@@ -1,9 +1,9 @@
 import React from 'react'
-
-function InputField() {
-  return (
-    <div>InputField</div>
-  )
+import "../style/inputfield.css"
+function InputField({ placeholder }) {
+    return (
+        <input className='input-field' placeholder={placeholder} onChange={() => { }} />
+    )
 }
 
 export default InputField

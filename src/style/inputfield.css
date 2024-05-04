@@ -1,0 +1,28 @@
+.input-field {
+    border-color: rgb(204, 204, 204);
+    border-radius: 4px;
+    border-style: solid;
+    border-width: 2px;
+    box-sizing: border-box;
+    font-size: medium;
+    color: rgb(204, 204, 204);
+
+    margin-left: 2px;
+    margin-right: 2px;
+    padding: 8px 5px;
+    width: fit-content;
+    transition: all 100ms ease 0s;
+}
+
+.input-field::placeholder {
+    outline: none;
+
+    font-size: medium;
+    color: rgb(204, 204, 204);
+}
+
+.input-field:focus {
+    outline: none;
+    font-size: medium;
+    color: rgb(204, 204, 204);
+}
