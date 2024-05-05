@@ -61,7 +61,7 @@ function JobSection() {
                         role={e.jobRole}
                     />
                 ))}
-                    {job.loading === true ? <img className="loading" src={loadingGif} alt="Loading..." /> : null}
+                    {job.loading === true ? <img className="loading" height={170} width={150} src={loadingGif} alt="Loading..." /> : null}
                 </>
 
             }

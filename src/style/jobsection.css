@@ -23,5 +23,13 @@
         grid-template-columns: 1fr;
         padding: 1em;
         grid-row-gap: 100px;
+        justify-items: center;
+
+        align-items: center;
+    }
+
+    .loading {
+        grid-column: span 1;
+        justify-self: center;
     }
 }
