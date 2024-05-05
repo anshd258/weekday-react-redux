@@ -14,6 +14,10 @@
     transition: all 100ms ease 0s;
 }
 
+.input-field:focus {
+    border-color: rgb(67, 126, 255);
+}
+
 .input-field::placeholder {
     outline: none;
 

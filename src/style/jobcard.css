@@ -3,10 +3,10 @@
 .main-card {
     display: flex;
     flex-direction: column;
-    max-width: 20rem;
+    max-width: 25rem;
     max-height: max-content;
     box-sizing: border-box;
-    border-radius: 1rem;
+    border-radius: 1.3rem;
     border-width: 2px;
     border-style: solid;
     border-color: #b6b6b6;
@@ -37,7 +37,7 @@
 .role {
     display: flex;
     flex-direction: row;
-    margin-top: 1rem;
+    margin-top: 0.5rem;
     padding: 0.5rem;
 }
 
@@ -83,7 +83,7 @@
 }
 
 .salary {
-    margin-top: 0.2rem;
+    margin-top: 0.1rem;
     margin-bottom: 0.1rem;
     font-size: small;
     color: #646476;
@@ -94,7 +94,7 @@
 }
 
 .heading {
-    margin-top: 0.6rem;
+    margin-top: 0.5rem;
     margin-bottom: 0.2rem;
     font-size: medium;
     color: #1b1b1b;
@@ -131,7 +131,7 @@
 
 .paragraph {
     margin: 0;
-    max-height: 15rem;
+    max-height: 13rem;
     letter-spacing: 1px;
     text-overflow: ellipsis;
     overflow: hidden;
@@ -169,7 +169,7 @@
 }
 
 .easy-apply {
-    padding: 0.8rem 1rem 0.8rem 1rem;
+    padding: 0.6rem;
     border-radius: 0.5rem;
     border: none;
     background-color: #54EFC3;
@@ -188,7 +188,7 @@
     align-items: center;
     flex-direction: row;
     margin-top: 0.3rem;
-    padding: 0.8rem 1rem 0.8rem 1rem;
+    padding: 0.8rem;
     border-radius: 0.5rem;
     border: none;
     background-color: #4943DA;

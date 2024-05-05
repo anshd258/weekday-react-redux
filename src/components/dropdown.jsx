@@ -8,8 +8,8 @@ const DropDownButton = ({ text, content }) => {
         setopen((open) => !open);
     }
     return (
-        <div >
-            <div className={`dropdownbutton ${open ? "dropdownbuttonopen" : null}`} onClick={toggler}>
+        <div  >
+            <div className={`dropdownbutton ${open ? "dropdownbuttonopen" : null}`} onFocus={toggler} onBlur={toggler}>
                 <span className='text' role='textbox' contentEditable onChange={() => { }}>{text}</span>
                 <span className="divider"> </span>
                 <span className='icon'> {

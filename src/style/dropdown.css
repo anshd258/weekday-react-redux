@@ -8,7 +8,7 @@
     padding: 3px 0px;
     margin-left: 2px;
     margin-right: 2px;
-    
+
     width: fit-content;
     transition: all 100ms ease 0s;
     background-color: rgb(255, 255, 255);
@@ -55,6 +55,7 @@
     position: absolute;
     min-width: max-content;
     display: flex;
+    z-index: 20;
     flex-direction: column;
     align-items: start;
     justify-content: center;

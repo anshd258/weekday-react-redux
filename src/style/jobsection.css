@@ -1,0 +1,21 @@
+.job-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    row-gap: 4rem;
+    column-gap: 3rem;
+    margin-top: 3rem;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    justify-items: center;
+    align-items: center;
+}
+
+
+@media only screen and (max-width: 768px) {
+    .job-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        padding: 1em;
+        grid-row-gap: 100px;
+    }
+}
