@@ -44,10 +44,12 @@ function JobCard() {
 
             </div>
             <button className='easy-apply'>
-                apply
+                ⚡ Easy Apply
             </button>
             <button className='unlock-referal'>
-                referal
+            <img />
+            <img />
+                Unlock referral ask
 
             </button>
         </div>
