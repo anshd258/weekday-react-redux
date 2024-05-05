@@ -10,13 +10,22 @@ const intialState = {
 export const jobReducer = (state = intialState, { type, jobs }) => {
     switch (type) {
         case ActionTypes.LOADING_PRODUCTS:
+            console.group(state.jobs);
 
-            return { ...state, jobs, loading: true };
+
+            return { ...state, loading: true };
         case ActionTypes.GET_PRODUCTS:
             console.log(jobs);
+            var updatedjobs;
+            if (state.jobs.length != 0) {
+                updatedjobs = state.jobs.concat(jobs)
+            } else if (jobs != null) {
+                updatedjobs = jobs
+            } else {
+                updatedjobs = state.jobs;
+            }
 
-            return { ...state, jobs, loading: false };
-
+            return { ...state, jobs: updatedjobs, loading: false };
         default:
             return state;
     }

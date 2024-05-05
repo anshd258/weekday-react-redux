@@ -7,10 +7,13 @@
     padding-left: 5rem;
     padding-right: 5rem;
     justify-items: center;
+
     align-items: center;
 }
-.loading{
-    align-self: center;
+
+.loading {
+    grid-column: span 3;
+    justify-self: center;
 }
 
 
