@@ -9,6 +9,9 @@
     justify-items: center;
     align-items: center;
 }
+.loading{
+    align-self: center;
+}
 
 
 @media only screen and (max-width: 768px) {
