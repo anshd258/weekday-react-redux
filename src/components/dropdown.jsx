@@ -9,14 +9,14 @@ const DropDownButton = ({ text, content, changeHandler }) => {
 
 
     };
-
+   // handles incoming change event in drop down 
     const handleSelectChange = (event) => {
         console.log(event.target.value);
         changeHandler(event.target.value);
     };
 
     return (
-        <div  >
+        <div >
             <div className={`dropdownbutton ${open ? "dropdownbuttonopen" : null}`}>
                 <select className="text" onChange={handleSelectChange} onFocus={toggler} onBlur={toggler} >
                     <option value="" disabled selected hidden>{text}</option>
@@ -26,11 +26,7 @@ const DropDownButton = ({ text, content, changeHandler }) => {
                     {open ? <FaChevronUp /> : <FaChevronDown />}
                 </span>
             </div>
-            {/* {open ? <div className={`${open ? "opencontent" : null}`}>
-                {content.map((value) => (<div className='content-item'>
-                    {value}
-                </div>))}
-            </div> : null} */}
+
         </div>
     )
 }

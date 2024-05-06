@@ -14,20 +14,21 @@ function FilterTiles() {
 
     return (
         <div className='filterbox'>
-            {job.loading ? (<img className="loading" src={loadingGif} alt="Loading..." />) : (<><DropDownButton
-                changeHandler={(value) => dispatch(changeRole({ value: value }
-                ))}
+            {job.loading ? (<img className="loading" src={loadingGif} alt="Loading..." />) : (<>
+                <DropDownButton key={text}
+                    changeHandler={(value) => dispatch(changeRole({ value: value }
+                    ))}
 
-                content={["All"].concat(job.uniqueRolVal)} text={"Role"} />
-                <DropDownButton
+                    content={["All"].concat(job.uniqueRolVal)} text={"Role"} />
+                <DropDownButton key={text}
                     changeHandler={(value) => dispatch(changeExp({ value: value }
                     ))}
                     content={["All"].concat(job.uniqueExpValues)} text={"Experience"} />
-                <DropDownButton
+                <DropDownButton key={text}
                     changeHandler={(value) => dispatch(changeLocation({ value: value }
                     ))}
                     content={["All"].concat(job.uniqueLocationval)} text={"Remote"} />
-                <DropDownButton
+                <DropDownButton key={text}
                     changeHandler={(value) => dispatch(changeSalary({ value: value }
                     ))}
                     content={["All"].concat(job.uniqueSalValues)} text={"Minimum Base pay Salary"} />

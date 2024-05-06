@@ -1,7 +1,7 @@
 import axios from "axios"
 import { ActionTypes, baseURL } from "../constants/actiontypes"
 
-
+//used thunk  to handle async actions
 export const getProducts = ({ offset, limit }) => async (dispatch) => {
     const response = await axios.post(baseURL, { "offset": offset, "limit": limit }, {
         headers: {

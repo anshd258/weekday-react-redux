@@ -44,7 +44,8 @@ function JobSection() {
     return (
         <div className='job-grid'>
             {
-                (job.loading === true && job.jobs.length === 0) ? (
+                {/*  shows tha basic loading event is list is empty  and loasint is true */ }
+                    (job.loading === true && job.jobs.length === 0) ? (
                     <img className="loading" src={loadingGif} alt="Loading..." />
                 ) : <> {job.jobs.map((e) => (
                     <JobCard
@@ -61,6 +62,7 @@ function JobSection() {
                         role={e.jobRole}
                     />
                 ))}
+                    {(job.loading === false && job.jobs.length === 0) ? <p> No Jobs To Display 🥲</p> : null}
                     {job.loading === true ? <img className="loading" height={170} width={150} src={loadingGif} alt="Loading..." /> : null}
                 </>
 

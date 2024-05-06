@@ -8,14 +8,19 @@ const intialState = {
     jobs: []
 }
 export const jobReducer = (state = intialState, { type, jobs, value }) => {
-    switch (type) {
-        case ActionTypes.LOADING_PRODUCTS:
+
+switch (type) {
+
+    //for loading in between the products are loaded
+    case ActionTypes.LOADING_PRODUCTS:
             console.group(state.jobs);
 
 
             return { ...state, loading: true };
-        case ActionTypes.GET_PRODUCTS:
 
+    // to get products from the api using thunk
+    case ActionTypes.GET_PRODUCTS:
+            // to create set of distinct values for filters
             const uniqueExperienceSet = new Set();
             const uniqueSalarySet = new Set();
             const uniqueLocation = new Set();
@@ -39,7 +44,7 @@ export const jobReducer = (state = intialState, { type, jobs, value }) => {
                     uniqueRole.add(job.jobRole);
                 }
             });
-
+            // converting them to array
             const uniqueExpValues = Array.from(uniqueExperienceSet).sort(function (a, b) {
                 return a - b;
             });
@@ -48,13 +53,14 @@ export const jobReducer = (state = intialState, { type, jobs, value }) => {
             });
             const uniqueLocationval = Array.from(uniqueLocation)
             const uniqueRolVal = Array.from(uniqueRole)
+            // to concat the new jobs coming after making a post request with required offset
             var updatedjobs;
             if (state.jobs.length !== 0) {
                 updatedjobs = state.jobs.concat(jobs)
             } else if (jobs !== null) {
                 updatedjobs = jobs
             } else {
-                updatedjobs = state.jobs;
+                updatedjobs = state.jobs; // sets the jobs if no jobs are ther or null
             }
 
             return {
@@ -69,14 +75,15 @@ export const jobReducer = (state = intialState, { type, jobs, value }) => {
 
 
             };
-        case ActionTypes.CHANGE_EXP:
+            // to hande exp change events
+    case ActionTypes.CHANGE_EXP:
 
             let selectedExpJobs = []
             if (value != "All") {
-                console.log(state.storejobs);
-                console.log(value);
+               
+                //filters the exp to match the value for both min and max
                 selectedExpJobs = state.storejobs.filter(item => item.minExp === parseInt(value) || item.maxExp === parseInt(value));
-                console.log(selectedExpJobs);
+                
 
             } else if (value == "All") {
                 selectedExpJobs = state.storejobs
@@ -84,14 +91,15 @@ export const jobReducer = (state = intialState, { type, jobs, value }) => {
 
 
             return { ...state, jobs: selectedExpJobs, loading: false };
-        case ActionTypes.CHANGE_SALARY:
+
+            // to hande salary change events
+    case ActionTypes.CHANGE_SALARY:
 
             let selectedSalJobs = []
             if (value != "All") {
-                console.log(state.storejobs);
-                console.log(value);
+                //filters the salary to match the value for both min and max
                 selectedSalJobs = state.storejobs.filter(item => item.minJdSalary === parseInt(value) || item.maxJdSalary === parseInt(value));
-                console.log(selectedSalJobs);
+                
 
             } else if (value == "All") {
                 selectedSalJobs = state.storejobs
@@ -99,14 +107,15 @@ export const jobReducer = (state = intialState, { type, jobs, value }) => {
 
 
             return { ...state, jobs: selectedSalJobs, loading: false };
+
+            // to hande company change events
         case ActionTypes.COMPANY_NAME:
 
             let selectedCompanyJobs = []
             if (value != "All") {
-                console.log(state.storejobs);
-                console.log(value);
+                //filter for company name filter
                 selectedCompanyJobs = state.storejobs.filter(item => item.companyName.toLowerCase().includes(value));
-                console.log(selectedCompanyJobs);
+                
 
             } else if (value == "All") {
                 selectedCompanyJobs = state.storejobs
@@ -115,15 +124,14 @@ export const jobReducer = (state = intialState, { type, jobs, value }) => {
 
             return { ...state, jobs: selectedCompanyJobs, loading: false };
 
-
+                // to hande location change events
         case ActionTypes.CHANGE_LOCATION:
 
             let selectedLocJobs = []
             if (value != "All") {
-                console.log(state.storejobs);
-                console.log(value);
+               //company location filter
                 selectedLocJobs = state.storejobs.filter(item => item.location === value);
-                console.log(selectedLocJobs);
+              
 
             } else if (value == "All") {
                 selectedLocJobs = state.storejobs
@@ -131,14 +139,15 @@ export const jobReducer = (state = intialState, { type, jobs, value }) => {
 
 
             return { ...state, jobs: selectedLocJobs, loading: false };
+
+            // to hande role change events
         case ActionTypes.CHANGE_ROLE:
 
             let selectedRoleJobs = []
             if (value != "All") {
-                console.log(state.storejobs);
-                console.log(value);
+               //role filter
                 selectedRoleJobs = state.storejobs.filter(item => item.jobRole === value);
-                console.log(selectedRoleJobs);
+              
 
             } else if (value == "All") {
                 selectedRoleJobs = state.storejobs

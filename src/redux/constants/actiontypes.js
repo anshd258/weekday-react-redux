@@ -1,6 +1,6 @@
 export const ActionTypes = {
- GET_PRODUCTS : "GET_PRODUCTS",
- LOADING_PRODUCTS: "LOADING_PRODUCTS",
+ GET_PRODUCTS : "GET_PRODUCTS", 
+ LOADING_PRODUCTS: "LOADING_PRODUCTS", 
  CHANGE_ROLE: "CHANGE_ROLE",
  CHANGE_EXP :"CHANGE_EXP",
  CHANGE_SALARY : "CHANGE_SALARY",
@@ -9,4 +9,4 @@ export const ActionTypes = {
 
 }
 
-export const baseURL = "https://api.weekday.technology/adhoc/getSampleJdJSON"
+export const baseURL = "https://api.weekday.technology/adhoc/getSampleJdJSON" 
