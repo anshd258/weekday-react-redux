@@ -8,7 +8,7 @@ export const getProducts = ({ offset, limit }) => async (dispatch) => {
             'Content-Type': 'application/json'
         }
     })
-    console.log(response.data.jdList);
+
 
     dispatch({
         type: ActionTypes.GET_PRODUCTS,

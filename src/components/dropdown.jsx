@@ -9,17 +9,18 @@ const DropDownButton = ({ text, content, changeHandler }) => {
 
 
     };
-   // handles incoming change event in drop down 
+
+    // handles incoming change event in drop down 
     const handleSelectChange = (event) => {
-        console.log(event.target.value);
+
         changeHandler(event.target.value);
     };
 
     return (
         <div >
             <div className={`dropdownbutton ${open ? "dropdownbuttonopen" : null}`}>
-                <select className="text" onChange={handleSelectChange} onFocus={toggler} onBlur={toggler} >
-                    <option value="" disabled selected hidden>{text}</option>
+                <select className="text" onChange={handleSelectChange} onFocus={toggler} onBlur={toggler} defaultValue={text}>
+                    <option value={text} disabled hidden>{text}</option>
                     {content.map((value, index) => (<option key={index} value={value}>{value}</option>))}
                 </select>
                 <span className="icon">

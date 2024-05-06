@@ -9,7 +9,7 @@ function JobSection() {
     const job = useSelector((state) => state.alljobs);
 
     const dispatch = useDispatch();
-    console.log(job);
+
     const handleScrollEnd = async () => {
         try {
             if (
@@ -20,7 +20,7 @@ function JobSection() {
                 dispatch(loading())
 
                 dispatch(getProducts(offset, 10))
-                console.log("reached end");
+
             }
         } catch (error) {
             console.log(error);
@@ -44,8 +44,8 @@ function JobSection() {
     return (
         <div className='job-grid'>
             {
-                {/*  shows tha basic loading event is list is empty  and loasint is true */ }
-                    (job.loading === true && job.jobs.length === 0) ? (
+
+                (job.loading === true && job.jobs.length === 0) ? (
                     <img className="loading" src={loadingGif} alt="Loading..." />
                 ) : <> {job.jobs.map((e) => (
                     <JobCard
