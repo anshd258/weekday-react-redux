@@ -1,4 +1,4 @@
-# Getting Started with Appp
+# Getting Started with WeekDay App
 
 This app contains 3 majour folder :-
  - Components :- containing all the components of the ract app ui components
@@ -6,6 +6,10 @@ This app contains 3 majour folder :-
 
  - styles :- contains all the styles of the app linked to ther specific components
 
+## Mobile Device
+
+The app is stable on mobile devices testd on iphon SE and other devices 
+ ``` IT IS MIGHT BE NOT STABLE ON TABLETS (HAVEN'T TESTED ON THAT)```
 ### `npm start`
 
 Runs the app in the development mode.\
