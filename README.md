@@ -8,7 +8,7 @@ This app contains 3 majour folder :-
 
 ## Mobile Device
 
-The app is stable on mobile devices testd on iphon SE and other devices 
+The app is stable on mobile devices tested on iphon SE and other devices 
  ``` IT IS MIGHT BE NOT STABLE ON TABLETS (HAVEN'T TESTED ON THAT)```
 ### `npm start`
 
