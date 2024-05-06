@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import Header from './components/header';
 import FilterTiles from './components/filtertiles';
 import JobSection from './components/jobsection';
