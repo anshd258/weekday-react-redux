@@ -15,6 +15,43 @@ export const getProducts = ({ offset, limit }) => async (dispatch) => {
         jobs: response.data.jdList
     })
 }
+
+export const changeExp = ({ value }) => {
+    return {
+        type: ActionTypes.CHANGE_EXP,
+        value: value
+    }
+
+}
+export const changeRole = ({ value }) => {
+    return {
+        type: ActionTypes.CHANGE_ROLE,
+        value: value
+    }
+
+}
+export const changeLocation = ({ value }) => {
+    return {
+        type: ActionTypes.CHANGE_LOCATION,
+        value: value
+    }
+
+}
+export const changeSalary = ({ value }) => {
+    return {
+        type: ActionTypes.CHANGE_SALARY,
+        value: value
+    }
+
+}
+export const changeCompany = ({ value }) => {
+    return {
+        type: ActionTypes.COMPANY_NAME,
+        value: value
+    }
+
+}
+
 export const loading = () => {
     return {
         type: ActionTypes.LOADING_PRODUCTS,
